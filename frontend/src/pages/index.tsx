@@ -2,7 +2,6 @@ import { HomeContainer, Product } from "@/styles/pages/home";
 import Image from "next/image";
 import shirt1 from '../assets/shirts/Shirt-1.png';
 import shirt2 from '../assets/shirts/Shirt-2.png';
-import shirt3 from '../assets/shirts/Shirt-3.png';
 
 export default function Home() {
   return (
