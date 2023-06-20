@@ -2,9 +2,6 @@ import { HomeContainer, Product } from "@/styles/pages/home";
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css'
 import Image from "next/image";
-import shirt1 from '../assets/shirts/Shirt-1.png';
-import shirt2 from '../assets/shirts/Shirt-2.png';
-import shirt3 from '../assets/shirts/Shirt-3.png';
 import { stripe } from "@/lib/stripe";
 import { GetServerSideProps } from "next";
 import Stripe from "stripe";
@@ -58,7 +55,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
       id: product.id,
       name: product.name,
       imageUrl: product.images[0],
-      price: price.unit_amount ,
+      price: price.unit_amount as number / 100,
     }
   })
 
